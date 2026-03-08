@@ -17,3 +17,7 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.region}"
+
+class TopCommenter(User):
+    class Meta:
+        proxy = True
